@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMM</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/panier_carte.css">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<header>
+    <nav id="nav">
+        <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+            <img src="./images/logoBAMM_blanc.png" height="50px" width="50px">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a_propos.html">À propos</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <span></span>
+        </ul>
+    </nav>
+    
+</header>
+
+<body>
+    <br><br><br><br><br><br><br><br><br>
+    <section id="infopaye">
+        <h2>Payement par Carte</h2>
+        <div id="optionpayement">
+            <input type="text" name=" code" id="prenom" placeholder="Votre Prénom"> <input type="text" name=" code" id="nom" placeholder="Votre Nom">
+            <input type="text" name=" code" id="adresse" placeholder="adresse"> <br>
+            <input type="text" name=" code" id="mail" placeholder="Votre mail"> <input type="text" name=" code" id="mail" placeholder="Votre numéro">
+            <br><br>
+            <h3>Type de carte</h3>
+            <div class="card-selection">
+                <label class="card-option">
+                  <input type="radio" name="card" value="visa">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" width="10%" >
+                </label>
+                
+                <label class="card-option">
+                  <input type="radio" name="card" value="mastercard">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="10%">
+                </label> <br> <br>
+                Nom :
+                <input type="text" name=" code" id="prenom" placeholder="Titulaire de la carte"> <br><br>
+                Code de carte :
+                <input type="text" name=" code" id="code_carte" placeholder="Ex : 1111 2222 3333 4444"><br><br>
+                Date d'expiration :
+                <input type="month" id="expiration-date" name="expiration-date"  min="2024-10" max="2030-12"> <br><br>
+                CVV :
+                <input type="text" name=" code" id="mail" placeholder="Ex : 123">
+                <br><br>
+                <a href="index.html">
+                <button class="valide-btn">Payer</button>
+                </a>
+              </div>
+              
+        </div>
+    </section>
+</body>
+
+<footer>
+
+    <div class="footer-section">
+        <h1>Nos pages</h1>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a_propos.html">À propos</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="panier.html">Panier</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h1>Categorie</h1>
+        <ul>
+            <li><a href="#">Pantalon</a></li>
+            <li><a href="#">T-Shirt</a></li>
+            <li><a href="#">Short</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h1>Nous suivre</h1>
+        <ul class="liste-footer">
+            <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i><strong>Youtube</strong></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i><strong>Twitter</strong></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i><strong>Instagram</strong></a></li>
+            <li><a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i><strong>TikTok</strong></a></li>
+        </ul>
+    </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.4651693552!2d6.837686581501665!3d47.64373933983686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47923b7f3ef97f73%3A0xa8bb356e6190f64c!2sIUT%20Nord%20Franche-Comt%C3%A9%20-%20Universit%C3%A9%20de%20Franche-Comt%C3%A9!5e0!3m2!1sen!2sfr!4v1729255618287!5m2!1sen!2sfr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</footer>
+
+<div class="nom-auteur">Antoine Duarte &copy </div>
+
+<script src="script/script.js"></script>
+</body>
+</html>

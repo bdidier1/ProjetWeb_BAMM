@@ -1,0 +1,402 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins_Bold";
+}
+
+/* 
+
+--------------------------------------------------------------
+|                          Barre de naviguation              |
+--------------------------------------------------------------
+
+
+*/
+
+#nav{
+  transition: background-color 0.4s ease; /* Transition fluide en 0.4 secondes */
+}
+
+header{
+  position:fixed;
+  font-family: "Poppins_Bold";
+  width: 100%; /* Prend toute la largeur de la page */
+  z-index: 1000; 
+}
+
+ul{
+  list-style-type: none;
+  align-items: center;
+}
+li{
+  display: inline-block;
+}
+li a{
+  color:white;
+  text-decoration: none;
+}
+header nav ul {
+  padding:1%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.menu-toggle{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px; /* Épaisseur des barres */
+  width: 25px; /* Largeur des barres */
+  background-color: white; /* Couleur des barres */
+  margin: 3px 0; /* Espace entre les barres */
+}
+
+/* BARRE SCROLL */
+nav.scrolled {
+  background-color: black; /* Change en noir après le scroll */
+}
+
+/* Barre de navation HAUT (RESPONSIVE) */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Masquer la liste par défaut */
+    flex-direction: column; /* Affiche les éléments verticalement */
+    position: absolute; /* Positionnement absolu */
+    top: 30px; /* Positionnement sous la barre de navigation */
+    right: 0; /* Aligne à droite */
+    background-color: black; /* Fond noir */
+    width: 100%; /* Prend toute la largeur */
+    padding: 10px 0; /* Espace vertical */
+}
+
+.nav-list.active {
+    display: flex; /* Affiche la liste quand active */
+}
+
+.menu-toggle {
+    display: flex; /* Affiche le menu burger */
+}
+
+#nav{
+  background-color: black;
+}
+header nav ul{
+  gap:30px
+}
+}
+
+body{
+  margin: 20;
+  padding: 20;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+}
+
+
+/*
+--------------------------------------------------------------
+|                          FOND A PROPOS                     |
+--------------------------------------------------------------
+*/
+#background-video-apropos {
+  position: absolute;
+  filter: brightness(0.7);
+  top: 0;
+  left: 0;
+  width: 100%; /* Pleine largeur */
+  height: 8%; /* 10% de la hauteur de la page */
+  object-fit: cover; /* Assure un bon ajustement sans déformation */
+  z-index: -1; /* En arrière-plan */
+}
+
+#home-apropos .background-high{
+display: flex;
+justify-content: center;
+margin-top:10% ;
+}
+
+.background-high h1{
+  position: absolute;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+}
+#home-apropos{
+  margin-bottom: 10%;
+}
+#text-apropos{
+  margin-top:10%;
+}
+@media (max-width: 768px) {
+  #background-video-apropos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Pleine largeur */
+    height: 5%; /* 10% de la hauteur de la page */
+    object-fit: cover; /* Assure un bon ajustement sans déformation */
+    z-index: -1; /* En arrière-plan */
+  }
+
+  #home-apropos {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20%;
+  }
+  #home-apropos h1 {
+    font-size: 4rem;
+  }
+  #text-apropos{
+    margin-top:15%;
+  }
+}
+
+@media (max-width: 500px) {
+  #text-apropos{
+    margin-top:40%;
+  }
+}
+
+
+input[type="checkbox"]{
+  display: none; 
+}
+
+.formulaire{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 10%;
+}
+
+.contenu{
+background-color: #ffffff;
+padding: 20px;
+border-radius: 10px;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 5%;
+}
+
+/* Style de base pour le contenu */
+.contenu {
+color: rgb(0, 0, 0); /* Couleur initiale */
+transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+/* Changement de couleur lorsqu'on passe la souris */
+.contenu:hover {
+background-color: rgb(234, 234, 234); /* Couleur au survol */
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-top: 10%;
+}
+
+hr {
+  border: 2px solid white; 
+  width: 70%;                
+  margin-top: 20%;        
+}
+
+.formulaire {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 20%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne les éléments à gauche */
+}
+
+label {
+  margin-top: 15%;
+  font-size: 18px; /* Taille du texte des labels */
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  width: 80%; /* Largeur des champs */
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px; /* Taille du texte dans les champs */
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+  border-color: #555;
+  outline: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: black; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #ffe9e9; /* Couleur au survol */
+  color: black;
+}
+
+/*
+--------------------------------------------------------------
+|                          FOOTER                            |
+--------------------------------------------------------------
+*/
+
+footer {
+  background-color: black;
+  color: white;
+  font-family: 'Poppins_Bold';
+  display: flex;
+  justify-content: center;
+  margin-top:10%;
+  margin-left: 15%;
+  margin-right: 15%;
+
+}
+.nom-auteur{
+  font-family: 'Poppins_Bold';
+  color:white;
+  display: flex;
+  justify-content: center;
+  padding:2%;
+}
+
+footer ul {
+  gap: 50px; /* Ici, le gap est appliqué aux éléments de la liste */
+  list-style-type: none; /* Pour supprimer les puces de la liste */
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.footer-section h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: block;
+}
+
+.liste-footer li {
+  margin-bottom: 8px;
+}
+
+.liste-footer i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-section h1{
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-section a:hover{
+  color:gray;
+}
+.footer-section h1::after {
+  content: '';
+  display: block;
+  width: 70%; /* Tu peux ajuster la largeur ici */
+  height: 2px;
+  background-color: white; /* Couleur de la barre */
+  margin: 10px 0; /* Espace entre le titre et la barre */
+}
+
+/* Ventes (RESPONSIVE) */
+@media (max-width: 768px) {
+  .footer-section h1{
+    font-size: 13px;
+    display: inline-block;
+  }
+  .footer-section a {
+    font-size: 12px;
+  }
+  .footer-section a i{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+  }
+  iframe{
+    display: none;
+  }
+  .liste-footer a strong{
+    display: none;
+}
+}
+
+/*
+--------------------------------------------------------------
+|                          Police d'écriture                 |
+--------------------------------------------------------------
+*/
+@font-face {
+  font-family: 'Poppins_Bold';
+  src: url("../fonts/Poppins-Bold.ttf");
+}

@@ -1,0 +1,498 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+body {
+    background-color: black;
+    scroll-behavior: smooth;
+    font-family: "Poppins_Bold";
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 
+
+--------------------------------------------------------------
+|                          Barre de naviguation              |
+--------------------------------------------------------------
+
+
+*/
+
+#nav{
+    transition: background-color 0.4s ease; /* Transition fluide en 0.4 secondes */
+  }
+  
+  header{
+    position:fixed;
+    font-family: "Poppins_Bold";
+    width: 100%; /* Prend toute la largeur de la page */
+    z-index: 1000; 
+  }
+  
+  nav ul{
+    list-style-type: none;
+    align-items: center;
+  }
+  li{
+    display: inline-block;
+  }
+  
+  li a{
+    color:white;
+    text-decoration: none;
+  }
+  header nav ul {
+    padding:1%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  
+  nav li a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  nav li a:hover:after {
+    width: 90%;
+    background: white;
+  }
+  .menu-toggle{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 3px; /* Épaisseur des barres */
+    width: 25px; /* Largeur des barres */
+    background-color: white; /* Couleur des barres */
+    margin: 3px 0; /* Espace entre les barres */
+  }
+  
+  /* BARRE SCROLL */
+  nav.scrolled {
+    background-color: black; /* Change en noir après le scroll */
+  }
+  
+  /* Barre de navation HAUT (RESPONSIVE) */
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none; /* Masquer la liste par défaut */
+      flex-direction: column; /* Affiche les éléments verticalement */
+      position: absolute; /* Positionnement absolu */
+      top: 30px; /* Positionnement sous la barre de navigation */
+      right: 0; /* Aligne à droite */
+      background-color: black; /* Fond noir */
+      width: 100%; /* Prend toute la largeur */
+      padding: 10px 0; /* Espace vertical */
+  }
+  
+  .nav-list.active {
+      display: flex; /* Affiche la liste quand active */
+  }
+  
+  .menu-toggle {
+      display: flex; /* Affiche le menu burger */
+  }
+  
+  #nav{
+    background-color: black;
+  }
+  header nav ul{
+    gap:30px
+  }
+  }
+
+.panier{
+    display: flex;
+    flex-direction: row;
+}
+
+  .counter {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-left: 5px; /* Espace entre le texte "Panier" et le compteur */
+    font-size: 0.8em;
+    vertical-align: middle; /* Pour aligner verticalement avec le texte */
+}
+
+/*
+--------------------------------------------------------------
+|                          PAGE BOUTIQUE                            |
+--------------------------------------------------------------
+*/
+
+.categorie {
+    width: 100%;
+    padding-block: 16px 32px;
+    margin: 16px 48px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    font-family: 'Poppins_Bold';
+    margin: auto;
+    overflow-x: auto;
+    flex-direction: column;
+}
+
+.listeProduit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.produit{
+    position: relative;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    background-color: white;
+    border-radius: 15px;
+    width: 250px;
+    height: 250px;
+    display: flex; /* Utilise flexbox pour centrer le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+}
+
+.info {
+    position : relative;
+    width: 250px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .listeProduit{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.price {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.buy-now-btn span {
+    font-size: 1.3em;
+    margin-left: 5px;
+}
+  
+.buy-now-btn {
+    position: absolute;
+    display: flex; /* Utilise flexbox pour centrer le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins_Bold';
+}
+  
+.buy-now-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/*
+--------------------------------------------------------------
+|                          CAROUSSEL IMAGE                   |
+--------------------------------------------------------------
+*/
+#caroussel-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 50px;
+  }
+  
+  .titre-caroussel h1{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins_Bold';
+    color: white;
+  }
+  
+  .titre-caroussel p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins_Bold';
+    color: white;
+  }
+  
+  .carousel-fleche {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-block: auto;
+    height: fit-content;
+    width: 48px;
+    border: none;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+    background-color: black;
+    color:white;
+  }
+  
+  .carousel-slide img:hover{
+    filter: brightness(0.5);
+    transition: 0.3s;
+  }
+  
+  .carousel-fleche--prev {
+    left: 20%;
+  }
+  
+  .carousel-fleche--next {
+    right: 20%;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    padding-block: 16px 32px;
+    margin: 16px 48px;
+    overflow-x: auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    flex-flow: row nowrap;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel-container::-webkit-scrollbar {
+    display:none;
+  }
+  
+  .carousel-slide img{
+    flex: 1 0 30%; /* Réduit la taille de base à 20% au lieu de 30% */
+    aspect-ratio: 1; /* Laisse l'image carrée */
+    flex-flow: column nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    background-color: white;
+    border-radius: 15px;
+  }
+  
+  @media (max-width: 768px) {
+  
+    #caroussel-image{
+      margin: 0;
+    }
+    .titre-caroussel h1{
+      font-size: 32px;
+    }
+    .titre-caroussel p{
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+    .carousel-fleche--prev {
+        left: 0;
+    }
+    .carousel-fleche--next {
+        right: 0;
+    }
+    
+  }
+
+.carousel-slide {
+    position: relative; /* Positionnement pour placer le texte sur l'image */
+}
+
+.carousel-slide:hover::before {
+    content: "Afficher tous les produits";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.carousel-slide:hover::before {
+    opacity: 1;
+}
+
+
+/*
+--------------------------------------------------------------
+|                          FOOTER                            |
+--------------------------------------------------------------
+*/
+
+footer {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins_Bold';
+    display: flex;
+    justify-content: center;
+    margin-top:10%;
+    margin-left: 15%;
+    margin-right: 15%;
+  
+  }
+  .nom-auteur{
+    font-family: 'Poppins_Bold';
+    color:white;
+    display: flex;
+    justify-content: center;
+    padding:2%;
+  }
+  
+  footer ul {
+    gap: 50px; /* Ici, le gap est appliqué aux éléments de la liste */
+    list-style-type: none; /* Pour supprimer les puces de la liste */
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer-section h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-icons {
+    display: block;
+  }
+  
+  .liste-footer li {
+    margin-bottom: 8px;
+  }
+  
+  .liste-footer i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .footer-section h1{
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .footer-section a:hover{
+    color:gray;
+  }
+  .footer-section h1::after {
+    content: '';
+    display: block;
+    width: 70%; /* Tu peux ajuster la largeur ici */
+    height: 2px;
+    background-color: white; /* Couleur de la barre */
+    margin: 10px 0; /* Espace entre le titre et la barre */
+  }
+  
+  /* Ventes (RESPONSIVE) */
+  @media (max-width: 768px) {
+    .footer-section h1{
+      font-size: 13px;
+      display: inline-block;
+    }
+    .footer-section a {
+      font-size: 12px;
+    }
+    .footer-section a i{
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+      align-items: center;
+    }
+    iframe{
+      display: none;
+    }
+    .liste-footer a strong{
+      display: none;
+  }
+  }
+  
+  /*
+  --------------------------------------------------------------
+  |                          Police d'écriture                 |
+  --------------------------------------------------------------
+  */
+  @font-face {
+    font-family: 'Poppins_Bold';
+    src: url("../fonts/Poppins-Bold.ttf");
+  }

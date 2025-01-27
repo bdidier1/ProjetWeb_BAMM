@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMM</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<header>
+    <nav id="nav">
+        <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+            <img src="./images/logoBAMM_blanc.png" height="50px" width="50px">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a_propos.html">À propos</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <span></span>
+        </ul>
+    </nav>
+</header>
+
+
+<body>
+
+    <section id="home-index">
+        <video autoplay muted loop id="background-video">
+            <source src="images/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="home-container">
+            <h1>BAMM</h1>
+            <p>Un clic, et BAMM ! C'est porté !</p>
+        </div>
+        <div class="button-home">
+            <a href="a_propos.html"><button>En savoir plus</button></a>
+            <a href="boutique.html"><button>Acheter</button></a>
+        </div>
+    </section>
+
+    <section id="home-categorie">
+        <div class="categorie-container">
+    
+            <div class="category-section">
+                <h1>TOP CATEGORIES</h1>
+                <p>Découvrez nos catégories au top de la mode</p>
+                <div class="cards-container">
+                    <div class="card-categorie">
+                        <div class="image-container">
+                            <img src="images/index/top_ventes/pull.png" alt="Coffee Mocha" />
+                            <div class="overlay">
+                                <h2>Pull</h2>
+                                <button>En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-categorie">
+                        <div class="image-container">
+                            <img src="images/index/top_ventes/pantalon.png" alt="Expresso Americano"/>
+                            <div class="overlay">
+                                <h2>Pantalon</h2>
+                                <button>En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-categorie">
+                        <div class="image-container">
+                            <img src="images/index/top_categories/chemises.png" alt="Cappuccino" />
+                            <div class="overlay">
+                                <h2>Chemises</h2>
+                                <button>En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+
+    <section id="home-ventes"></section>
+        <div class="categorie-container">
+            <div class="category-section">
+                <h1>TOP VENTES</h1>
+                <p>Découvrez nos top ventes sur BAMM</p>
+                <div class="cards-container">
+
+                    <div class="card-ventes">
+                        <div class="image-container">
+                            <img src="images/index/top_ventes/pull.png" alt="Expresso Americano"/>
+                            <h3 class="price">199.99€</h3>
+                            <button class="buy-now-btn">Acheter<span class="material-symbols-outlined">
+                                shopping_cart
+                                </span></button>
+                        </div>
+                    </div>
+                    <div class="card-ventes">
+                        <div class="image-container">
+                            <img src="images/index/top_ventes/jogging_vente.jpg" alt="Expresso Americano"/>
+                            <h3 class="price">19.99€</h3>
+                            <button class="buy-now-btn">Acheter<span class="material-symbols-outlined">
+                                shopping_cart
+                                </span></button>
+                        </div>
+                    </div>
+                    <div class="card-ventes">
+                        <div class="image-container">
+                            <img src="images/index/top_ventes/pantalon.png" alt="Expresso Americano"/>
+                            <h3 class="price">99.99€</h3>
+                            <button class="buy-now-btn">Acheter<span class="material-symbols-outlined">
+                                shopping_cart
+                                </span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+
+    <div class="titre-caroussel">
+        <h1>Que vendons nous ?</h1>
+        <p>Découvrez ce que nous vendons</p>
+    </div>
+
+    <section id="caroussel-image">
+
+        <button class="carousel-fleche carousel-fleche--prev" onclick="handleCarouselMove(false)">
+            &#8249;
+          </button>
+        
+          <button class="carousel-fleche carousel-fleche--next" onclick="handleCarouselMove()">
+            &#8250;
+          </button>
+          
+          <div class="carousel-container" dir="ltr">
+            <div class="carousel-slide"><img src="images/index/ventes/jogging_gris.jpg" height="250" width="250" alt="img_caroussel"></div>
+            <div class="carousel-slide"><img src="images/index/ventes/pull_vente.png" height="250" width="250" alt="img_caroussel"></div>
+            <div class="carousel-slide"><img src="images/index/ventes/gilet_rl.jpg" height="250" width="250" alt="img_caroussel"></div>
+            <div class="carousel-slide"><img src="images/index/ventes/doudoune.png" height="250" width="250" alt="img_caroussel"></div>
+            <div class="carousel-slide"><img src="images/index/ventes/chemise.jpg" height="250" width="250" alt="img_caroussel"></div>
+            <div class="carousel-slide"><img src="images/index/ventes/short.png" height="250" width="250" alt="img_caroussel"></div>
+            <div class="carousel-slide"><img src="images/index/ventes/chaussettes.png" height="250" width="250" alt="img_caroussel"></div>
+            <div class="carousel-slide"><img src="images/index/ventes/chaussure.jpg" height="250" width="250" alt="img_caroussel"></div>
+          </div>
+    </section>
+
+    
+
+    <footer>
+
+        <div class="footer-section">
+            <h1>Nos pages</h1>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a_propos.html">À propos</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="panier.html">Panier</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-section">
+            <h1>Categorie</h1>
+            <ul>
+                <li><a href="#">Pantalon</a></li>
+                <li><a href="#">T-Shirt</a></li>
+                <li><a href="#">Short</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h1>Nous suivre</h1>
+            <ul class="liste-footer">
+                <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i><strong>Youtube</strong></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i><strong>Twitter</strong></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i><strong>Instagram</strong></a></li>
+                <li><a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i><strong>TikTok</strong></a></li>
+            </ul>
+        </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.4651693552!2d6.837686581501665!3d47.64373933983686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47923b7f3ef97f73%3A0xa8bb356e6190f64c!2sIUT%20Nord%20Franche-Comt%C3%A9%20-%20Universit%C3%A9%20de%20Franche-Comt%C3%A9!5e0!3m2!1sen!2sfr!4v1729255618287!5m2!1sen!2sfr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+    <div class="nom-auteur">Baptiste DIDIER &copy </div>
+      
+    <script src="script/script.js"></script>
+</body>
+</html>

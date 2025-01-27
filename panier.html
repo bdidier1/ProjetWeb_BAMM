@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMM</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/panier.css">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<header>
+    <nav id="nav">
+        <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+            <img src="./images/logoBAMM_blanc.png" height="50px" width="50px">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a_propos.html">À propos</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <span></span>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <br><br><br><br><br><br><br>
+    <section>
+    <h2>Votre Panier</h2>
+    <div class="panier">
+        <img src="images/index/top_ventes/pull.png" alt="Produit 1">
+        <div class="item-info">
+            <h3>Pull Noir</h3>
+            <p>Quantité : 1</p>
+            <p>Prix : 199,99 €</p>
+        </div>
+        <button class="ajoute-btn">Ajouter</button>
+        <button class="retire-btn">Retirer</button>
+    </div>
+
+    <div class="panier">
+        <img src="images/index/top_ventes/jogging_vente.jpg" alt="Produit 2">
+        <div class="item-info">
+            <h3>Jogging Noir</h3>
+            <p>Quantité : 1</p>
+            <p>Prix : 19,99 €</p>
+        </div>
+        <button class="ajoute-btn">Ajouter</button>
+        <button class="retire-btn">Retirer</button>
+    </div>
+
+    <div class="cart-summary">
+        <p>Total : 219,98 €</p>
+        
+    </div>
+    </section>
+
+    <section id="Recapitulatif">
+        <h2>Récapitulatif</h2>
+        <p>Code de reduction : </p>
+        <input type="text" name=" code" id="code" placeholder="Votre code"> <button> Valider</button>
+        <br>
+        <p>Sous-total : 219,98 €</p>
+        <p>Fraix de livraison : 2,50 €</p>
+        <p>TOTAL : 222,48 €</p>
+        <a href="#infopaye">
+        <button class="valide-btn">Paiement</button>
+        </a>
+        
+    </section>
+
+    <section id="infopaye">
+        <h2>Option de payement</h2>
+        <div id="paypal">
+            <h3>Paypal</h3>
+            <a href="https://www.paypal.com/your-link-here" target="_blank">
+                <button class="paypal-btn">
+                  Payer avec PayPal
+                </button>
+            </a> 
+        </div>
+        <div id="optionpayement">
+            <h3>Par carte</h3>
+            <a href="carte.html" >
+                <button class="valide-btn">
+                  Par Carte                </button>
+            </a> 
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="footer-section">
+            <h1>Nos pages</h1>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a_propos.html">À propos</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="panier.html">Panier</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-section">
+            <h1>Categorie</h1>
+            <ul>
+                <li><a href="#">Pantalon</a></li>
+                <li><a href="#">T-Shirt</a></li>
+                <li><a href="#">Short</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h1>Nous suivre</h1>
+            <ul class="liste-footer">
+                <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i><strong>Youtube</strong></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i><strong>Twitter</strong></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i><strong>Instagram</strong></a></li>
+                <li><a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i><strong>TikTok</strong></a></li>
+            </ul>
+        </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.4651693552!2d6.837686581501665!3d47.64373933983686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47923b7f3ef97f73%3A0xa8bb356e6190f64c!2sIUT%20Nord%20Franche-Comt%C3%A9%20-%20Universit%C3%A9%20de%20Franche-Comt%C3%A9!5e0!3m2!1sen!2sfr!4v1729255618287!5m2!1sen!2sfr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+    <div class="nom-auteur">Antoine Duarte &copy </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

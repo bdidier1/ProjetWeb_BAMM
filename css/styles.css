@@ -1,0 +1,704 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+body {
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+
+/* 
+
+--------------------------------------------------------------
+|                          Barre de naviguation              |
+--------------------------------------------------------------
+
+
+*/
+
+#nav{
+  transition: background-color 0.4s ease; /* Transition fluide en 0.4 secondes */
+}
+
+header{
+  position:fixed;
+  font-family: "Poppins_Bold";
+  width: 100%; /* Prend toute la largeur de la page */
+  z-index: 1000; 
+}
+
+nav ul{
+  list-style-type: none;
+  align-items: center;
+}
+li{
+  display: inline-block;
+}
+
+li a{
+  color:white;
+  text-decoration: none;
+}
+header nav ul {
+  padding:1%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+
+nav li a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+nav li a:hover:after {
+  width: 90%;
+  background: white;
+}
+.menu-toggle{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px; /* Épaisseur des barres */
+  width: 25px; /* Largeur des barres */
+  background-color: white; /* Couleur des barres */
+  margin: 3px 0; /* Espace entre les barres */
+}
+
+/* BARRE SCROLL */
+nav.scrolled {
+  background-color: black; /* Change en noir après le scroll */
+}
+
+/* Barre de navation HAUT (RESPONSIVE) */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Masquer la liste par défaut */
+    flex-direction: column; /* Affiche les éléments verticalement */
+    position: absolute; /* Positionnement absolu */
+    top: 30px; /* Positionnement sous la barre de navigation */
+    right: 0; /* Aligne à droite */
+    background-color: black; /* Fond noir */
+    width: 100%; /* Prend toute la largeur */
+    padding: 10px 0; /* Espace vertical */
+}
+
+.nav-list.active {
+    display: flex; /* Affiche la liste quand active */
+}
+
+.menu-toggle {
+    display: flex; /* Affiche le menu burger */
+}
+
+#nav{
+  background-color: black;
+}
+header nav ul{
+  gap:30px
+}
+}
+
+
+/* 
+
+--------------------------------------------------------------
+|                          PAGE D'ACCUEIL                    |
+--------------------------------------------------------------
+
+*/
+
+#home-index {
+  position: relative; /* Positionnement relatif pour l'empilement des éléments */
+  color: white;
+  padding: 15%;
+}
+
+#background-video {
+  position: absolute;
+  filter: brightness(0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  object-fit: cover; /* Pour que la vidéo couvre toute la section */
+  z-index: -1; /* Assure que la vidéo est en arrière-plan */
+}
+
+.home-container {
+  position: relative; /* Pour que le contenu reste au-dessus de la vidéo */
+  z-index: 1;
+  text-align: center; /* Centrage du texte */
+}
+/* TITRE */
+
+@keyframes monter{
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+}
+.home-container h1{
+  display: flex;
+  justify-content: center;
+  font-size: 10.5rem;
+  font-family: 'Poppins_Bold';
+  animation: monter 1s ease-out;
+}
+/* SLOGAN */
+.home-container p{
+  font-family: 'Poppins_Bold';
+  display: flex;
+  justify-content: center;
+  animation: monter 1s ease-out;
+
+}
+/* BOUTTON */
+.button-home{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: monter 1s ease-out;
+
+}
+.button-home button{
+  background-color: transparent; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: 5px solid; /* Supprime la bordure par défaut */
+  border-radius: 5px; /* Arrondi les coins du bouton */
+  cursor: pointer; /* Change le curseur au survol */
+  padding: 20px 50px;
+  font-family: 'Poppins_Bold';
+}
+.button-home button:hover{
+  /* color: gray; */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Accueil (RESPONSIVE) */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+  }
+  .home-container h1 {
+    font-size: 5rem;
+  }
+  .button-home button{
+    padding:10px 20px;
+  }
+}
+/* 
+
+--------------------------------------------------------------
+|                          SECTION CATEGORIE                 |
+--------------------------------------------------------------
+
+*/
+
+#home-categorie {
+  margin-top:10%;
+  color: white;
+  font-family: "Poppins_Bold";
+  position: relative;
+  height: 400px;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Aligne horizontalement au centre */
+  align-items: center; /* Aligne verticalement au centre */
+}
+
+/* Arrière-plan en forme circulaire */
+#home-categorie::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  clip-path: circle(50% at 50% 50%);
+  z-index: 1;
+}
+
+.categorie-container {
+  position: relative;
+  z-index: 2; /* Assure que le texte soit au-dessus de l'arrière-plan circulaire */
+}
+
+#home-categorie h1 {
+  font-size: 2.5em;
+  color: black; /* Couleur contrastante */
+}
+#home-categorie p {
+  color: black; /* Couleur contrastante */
+}
+
+/* ------------------ CARDS CONTAINER ------------------ */
+
+.category-section {
+  text-align: center; /* Centre le titre et le texte */
+}
+
+.cards-container {
+  display: flex; /* Utilise Flexbox pour disposer les cartes en ligne */
+  justify-content: center; /* Centre les cartes horizontalement */
+  gap: 20px; /* Espace entre les cartes */
+  margin-top: 20px; /* Espace au-dessus des cartes */
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si l'espace est insuffisant */
+}
+
+.card-categorie {
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  overflow: hidden; /* Cache le débordement */
+  width: 250px; /* Largeur fixe pour les cartes */
+  text-align: center; /* Centre le contenu à l'intérieur des cartes */
+  position: relative; /* Nécessaire pour le positionnement de l'overlay */
+}
+
+.image-container {
+  position: relative; /* Nécessaire pour le positionnement de l'overlay */
+}
+
+.image-container img {
+  width: 100%; /* L'image remplit toute la largeur de la carte */
+  height: auto; /* Conserve le ratio d'aspect */
+  border-radius: 10px 10px 0 0; /* Arrondit le haut de l'image */
+}
+
+.overlay {
+  position: absolute; /* Positionnement absolu par rapport à l'image */
+  top: 0; /* Aligne en haut */
+  left: 0; /* Aligne à gauche */
+  width: 100%; /* Prend toute la largeur */
+  height: 100%; /* Prend toute la hauteur */
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur sombre avec transparence */
+  display: flex; /* Utilise Flexbox pour centrer le texte */
+  flex-direction: column; /* Dispose le texte et le bouton en colonne */
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+  opacity: 0; /* Masque l'overlay par défaut */
+  transition: opacity 0.3s; /* Animation de la transition */
+}
+
+.card-categorie:hover .overlay {
+  opacity: 1; /* Rend l'overlay visible au survol */
+}
+
+.card-categorie h2 {
+  color: white; /* Couleur du texte du titre */
+  margin: 0; /* Supprime la marge */
+}
+
+.card-categorie button {
+  background-color: black; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 5px; /* Arrondi les coins du bouton */
+  padding: 10px 20px; /* Espace intérieur du bouton */
+  cursor: pointer; /* Change le curseur au survol */
+  margin-top: 10px; /* Marge au-dessus du bouton */
+  font-family: 'Poppins_Bold';
+}
+
+.card-categorie button:hover {
+ color:black;
+  background-color: white; /* Couleur du bouton au survol */
+}
+
+/* Catégorie (RESPONSIVE) */
+@media (max-width: 768px) {
+  #home-categorie h1{
+    font-size: 32px;
+  }
+  #home-categorie p{
+    font-size:10px;
+    color:black;
+  }
+ .card-categorie{
+  flex-wrap: wrap;
+  width: 20%;
+ }
+
+ .card-categorie button {
+  padding: 1px 1px; /* Espace intérieur du bouton */
+  font-family: 'Poppins_Bold';
+}
+#home-categorie h2 {
+  font-size: 13px;
+}
+
+}
+
+
+/* 
+
+--------------------------------------------------------------
+|                          SECTION VENTES                    |
+--------------------------------------------------------------
+
+*/
+#home-ventes{
+  margin-top:5%;
+}
+.category-section h1{
+  color:white;
+  font-family: 'Poppins_Bold';
+}
+.category-section p{
+  color:white;
+  font-family: 'Poppins_Bold';
+}
+
+.card-categorie{
+  color:white;
+  font-family: 'Poppins_Bold';
+}
+
+.card-ventes button {
+  background-color: black; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 5px; /* Arrondi les coins du bouton */
+  padding: 10px 20px; /* Espace intérieur du bouton */
+  cursor: pointer; /* Change le curseur au survol */
+  margin-top: 10px; /* Marge au-dessus du bouton */
+  font-family: 'Poppins_Bold';
+}
+
+.card-ventes button:hover{
+  background-color: white;
+  color:black;
+}
+
+.card-ventes {
+  font-family: 'Poppins_Bold';
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.19); /* Ombre légère */
+  overflow: hidden; /* Cache le débordement */
+  width: 250px; /* Largeur fixe pour les cartes */
+  text-align: center; /* Centre le contenu à l'intérieur des cartes */
+  position: relative; /* Nécessaire pour le positionnement de l'overlay */
+}
+
+.image-container {
+  position: relative; /* Nécessaire pour positionner les éléments à l'intérieur de l'image */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.price {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.buy-now-btn span{
+  font-size: 1.3em;
+  margin-left: 5px;
+}
+
+.buy-now-btn {
+  position: absolute;
+  display: flex; /* Utilise flexbox pour centrer le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+  bottom: 10px;
+  right: 10px;
+  padding: 20px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins_Bold';
+}
+
+.buy-now-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+/* Ventes (RESPONSIVE) */
+@media (max-width: 768px) {
+  #home-categorie h1{
+    font-size: 32px;
+  }
+  #home-categorie p{
+    font-size:10px;
+    color:black;
+  }
+ .card-categorie{
+  flex-wrap: wrap;
+  width: 20%;
+ }
+}
+
+/*
+--------------------------------------------------------------
+|                          CAROUSSEL IMAGE                   |
+--------------------------------------------------------------
+*/
+
+#caroussel-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.titre-caroussel h1{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins_Bold';
+  color: white;
+}
+
+.titre-caroussel p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins_Bold';
+  color: white;
+}
+
+.carousel-fleche {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-block: auto;
+  height: fit-content;
+  width: 48px;
+  border: none;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  background-color: black;
+  color:white;
+}
+
+.carousel-slide img:hover{
+  filter: brightness(0.5);
+  transition: 0.3s;
+}
+
+.carousel-fleche--prev {
+  left: 0;
+}
+
+.carousel-fleche--next {
+  right: 0;
+}
+
+.carousel-container {
+  width: 100%;
+  padding-block: 16px 32px;
+  margin: 16px 48px;
+  overflow-x: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  flex-flow: row nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display:none;
+}
+
+.carousel-slide img{
+  flex: 1 0 30%; /* Réduit la taille de base à 20% au lieu de 30% */
+  aspect-ratio: 1; /* Laisse l'image carrée */
+  flex-flow: column nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  background-color: white;
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+
+  #caroussel-image{
+    margin: 0;
+  }
+  .carousel-slide {
+    flex: 1 0 90%;
+  }
+  .titre-caroussel h1{
+    font-size: 32px;
+  }
+  .titre-caroussel p{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+/*
+--------------------------------------------------------------
+|                          FOOTER                            |
+--------------------------------------------------------------
+*/
+
+footer {
+  background-color: black;
+  color: white;
+  font-family: 'Poppins_Bold';
+  display: flex;
+  justify-content: center;
+  margin-top:10%;
+  margin-left: 15%;
+  margin-right: 15%;
+
+}
+.nom-auteur{
+  font-family: 'Poppins_Bold';
+  color:white;
+  display: flex;
+  justify-content: center;
+  padding:2%;
+}
+
+footer ul {
+  gap: 50px; /* Ici, le gap est appliqué aux éléments de la liste */
+  list-style-type: none; /* Pour supprimer les puces de la liste */
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.footer-section h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: block;
+}
+
+.liste-footer li {
+  margin-bottom: 8px;
+}
+
+.liste-footer i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-section h1{
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-section a:hover{
+  color:gray;
+}
+.footer-section h1::after {
+  content: '';
+  display: block;
+  width: 70%; /* Tu peux ajuster la largeur ici */
+  height: 2px;
+  background-color: white; /* Couleur de la barre */
+  margin: 10px 0; /* Espace entre le titre et la barre */
+}
+
+/* Ventes (RESPONSIVE) */
+@media (max-width: 768px) {
+  .footer-section h1{
+    font-size: 13px;
+    display: inline-block;
+  }
+  .footer-section a {
+    font-size: 12px;
+  }
+  .footer-section a i{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+  }
+  iframe{
+    display: none;
+  }
+  .liste-footer a strong{
+    display: none;
+}
+}
+
+/*
+--------------------------------------------------------------
+|                          Police d'écriture                 |
+--------------------------------------------------------------
+*/
+@font-face {
+  font-family: 'Poppins_Bold';
+  src: url("../fonts/Poppins-Bold.ttf");
+}
