@@ -4,7 +4,7 @@ Une boutique en ligne de vêtements : catalogue, page à propos, carte et panier
 
 Projet web de 1<sup>re</sup> année de BUT Informatique (2024 – 2025), réalisé en équipe de 4.
 
-**Voir le site : [bdidier1.github.io/ProjetWeb_BAMM](https://bdidier1.github.io/ProjetWeb_BAMM/)**
+**Voir le site : [bdidier3.github.io/ProjetWeb_BAMM](https://bdidier3.github.io/ProjetWeb_BAMM/)**
 
 ## Répartition
 
