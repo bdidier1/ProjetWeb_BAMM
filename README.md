@@ -1,10 +1,32 @@
-# ProjetWeb_BAMM
+# BAMM : boutique de vêtements
 
-- La **page d'accueil** a été réalisée par [DIDIER Baptiste](mailto:baptiste.didier@edu.univ-fcomte.fr)   
-- La **page de boutique** a été réalisée par [LABBE Mathis](mailto:mathis.labbe@edu.univ-fcomte.fr)   
-- Le **panier** a été réalisé par [DUARTE Antoine](mailto:antoine.duarte@edu.univ-fcomte.fr)   
-- La **page à propos** a été réalisée par [DEMOLY Mathis](mailto:mathis.demoly@edu.univ-fcomte.fr)   
+Une boutique en ligne de vêtements : catalogue, page à propos, carte et panier qui calcule le total et la livraison.
 
-[DIDIER Baptiste](mailto:baptiste.didier@edu.univ-fcomte.fr) a travaillé sur le header/footer
+Projet web de 1<sup>re</sup> année de BUT Informatique (2024 – 2025), réalisé en équipe de 4.
 
-Lien du site (hébergé sur GitHub Pages) : [https://bdidier3.github.io/ProjetWeb_BAMM/index.html](https://bdidier3.github.io/ProjetWeb_BAMM/index.html)
+**Voir le site : [bdidier1.github.io/ProjetWeb_BAMM](https://bdidier1.github.io/ProjetWeb_BAMM/)**
+
+## Répartition
+
+| Partie | Réalisée par |
+| :--- | :--- |
+| Page d'accueil, en-tête et pied de page communs | Baptiste Didier |
+| Page boutique | Mathis Labbé |
+| Panier | Antoine Duarte |
+| Page à propos | Mathis Demoly |
+
+## Pages
+
+- `index.html` : accueil
+- `boutique.html` : catalogue des produits
+- `panier.html` : panier, total et frais de livraison
+- `carte.html` : carte
+- `a_propos.html` : présentation de la marque
+
+## Lancer en local
+
+Aucune installation : ouvrez `index.html` dans un navigateur.
+
+## Technologies
+
+HTML · CSS · JavaScript
